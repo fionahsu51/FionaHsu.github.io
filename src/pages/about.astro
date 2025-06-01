@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'About';
+const description = 'About your blog.';
+const permalink = `${Astro.site.href}about`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="about">
+  <div class="container">
+    <h3>About Me</h3>
+    <div style="top-padding: 100px">
+      <figure class="about-image"> 
+        <img src="/assets/fionagrad.jpg" alt="Fiona Profile" style= "border-radius: 20%">
+      </figure>
+
+      <p>Hi! I'm Fiona Hsu, a Computer Science: Computer Game Design graduate from UC Santa Cruz.
+        My main interests are AI, HCI, and video game programming Currently based in Rancho Cucamonga, CA.</p>
+      
+    </div>
+    
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>

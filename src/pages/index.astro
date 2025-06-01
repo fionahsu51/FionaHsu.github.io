@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Fiona Hsu';
+const description = 'Fiona Hsu Portfolio';
+const permalink = Astro.site.href;
+---
+
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+  <div class="home-container">
+    <div class="home-copy">
+
+      <h1>Fiona Hsu</h1>
+      <h2>Software Engineer and Game Developer</h2>
+    </div>
+  </div>
+
+  <div>
+    <h1>Projects</h1><hr>
+    <div class="row">
+      <div class="column">
+        <img src="assets/otter_screenshot.jpg" alt="Otter UnderWotter" class="rounded-image">
+        <h2>Otter Underwotter</h2>
+        <p>A rogue-lite shooter game where you must rescue your significant otter! </p>
+      </div>
+      <div class="column">
+        <img src="assets/lom_screenshot.png" alt="Love & Other Monsters" class="rounded-image">
+        <h2>Love & Other Monsters</h2>
+        <p>A demo of a 2D-action dating sim inspired by Castlevania, Monster Prom, and Fire Emblem. </p>
+      </div>
+
+      <div class="column">
+        <img src="assets/hcs_screenshot.png" alt="Heart Crossed Studios" class="rounded-image">
+        <h2>Heart Crossed Studios Website</h2>
+        <p>Want to know more about the characters and lore in Love & Other Monsters? Or the studio behind it? Check out the website!</p>
+      </div>
+
+      <div class="column">
+        <img src="assets/turnip_screenshot.png" alt="Turnip - Birth of a Made Man" class="rounded-image">
+        <h2>Turnip - Birth of a Made Man</h2>
+        <p>Take control of Turnip the rabbit who must out maneuver the AI-controlled farmer in this stealthy game.</p>
+      </div>
+
+      <div class="column">
+        <img src="assets/axislost_screenshot.png" alt="Axis Lost" class="rounded-image">
+        <h2>Axis Lost</h2>
+        <p>Escape a ruined research station in this mind-bending, recursive game. Set in a 3D environment filled with interactables.</p>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="../components/like_button.js"></script>
+  <script src="../components/hover_button.jsx"></script>
+</BaseLayout>
+
+<style>
+  .home-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 2em 0;
+    min-height: 400px;
+  }
+
+  .home-copy {
+    flex: 1;
+    padding: 0 1em;
+  }
+
+  .home-copy h1 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+  }
+
+  .home-copy p {
+    font-size: 1.4em;
+  }
+
+  .hero-image-container {
+    margin: 0 1em;
+    text-align: center;
+  }
+
+  .hero-image-container picture {
+    display: block;
+    min-height: 250px;
+  }
+
+  .caption {
+    font-size: .8em;
+    font-style: italic;
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 1em;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .rounded-image {
+    border-radius: 20px; /* Adjust the value to control the rounding */
+  }
+
+  @media (max-width: 1200px) {
+    p {
+      font-size: 1.2em;
+    }
+
+    .hero-image {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .home-container {
+      flex-direction: column;
+    }
+
+    .home-copy {
+      flex: 0;
+      padding-bottom: 2em;
+      text-align: center;
+    }
+  }
+</style>
