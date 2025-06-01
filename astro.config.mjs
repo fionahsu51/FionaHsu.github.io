@@ -10,8 +10,7 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fionahsu51.com',
-  base: 'FionaHsu.github.io',
+  site: 'https://fionahsu.com',
   integrations: [mdx(), svelte(), react(), preact()],
   markdown: {
     shikiConfig: {
