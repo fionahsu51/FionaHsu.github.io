@@ -1,0 +1,1 @@
+import"./preact.module.lG0Eyu_a.js";import"./hoisted.orYLOFLh.js";const t=React.createElement;class o extends React.Component{constructor(e){super(e),this.state={liked:!1}}render(){return this.state.liked?"You liked this.":t("button",{onClick:()=>this.setState({liked:!0})},"Like")}}const n=document.querySelector("#like_button_container"),r=ReactDOM.createRoot(n);r.render(t(o));
