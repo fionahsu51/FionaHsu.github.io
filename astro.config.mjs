@@ -10,7 +10,7 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-template.netlify.app',
+  site: 'https://fionahsu51.com',
   integrations: [mdx(), svelte(), react(), preact()],
   markdown: {
     shikiConfig: {
